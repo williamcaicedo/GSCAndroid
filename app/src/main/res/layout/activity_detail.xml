@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="co.edu.utb.androidgeneticsyndromecatalog.DetailActivity">
+
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/name"
+        android:textSize="30dp"/>
+
+    <ImageView
+        android:id="@+id/illustrationImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameTextView"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"/>
+
+    <TextView
+        android:id="@+id/synonymLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/illustrationImageView"
+        android:paddingTop="5dp"
+        android:textColor="@color/synonym"
+        android:text="Sinónimo:"/>
+    <TextView
+        android:id="@+id/synonymTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/synonymLabel"
+        android:textColor="@color/name"/>
+
+
+    <TextView
+        android:id="@+id/inheritanceLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/synonymTextView"
+        android:textColor="@color/synonym"
+        android:text="Herencia:"/>
+    <TextView
+        android:id="@+id/inheritanceTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inheritanceLabel"
+        android:textColor="@color/name"/>
+
+    <TextView
+        android:id="@+id/evolutionLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inheritanceTextView"
+        android:paddingTop="5dp"
+        android:textColor="@color/synonym"
+        android:text="Evolución:"/>
+    <TextView
+        android:id="@+id/evolutionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/evolutionLabel"
+        android:textColor="@color/name"/>
+    <TextView
+        android:id="@+id/retardationLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/evolutionTextView"
+        android:paddingTop="5dp"
+        android:textColor="@color/synonym"
+        android:text="Retardo mental:"/>
+    <TextView
+        android:id="@+id/retardationTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/retardationLabel"
+        android:textColor="@color/name"/>
+
+    <TextView
+        android:id="@+id/examsLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/retardationTextView"
+        android:paddingTop="5dp"
+        android:textColor="@color/synonym"
+        android:text="Exámenes clínicos de utilidad diagnóstica:"/>
+    <TextView
+        android:id="@+id/examsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/examsLabel"
+        android:textColor="@color/name"/>
+
+    <TextView
+        android:id="@+id/bibliographyLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/examsTextView"
+        android:paddingTop="5dp"
+        android:textColor="@color/synonym"
+        android:text="Bibliografía:"/>
+
+    <LinearLayout
+        android:id="@+id/bibliography"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bibliographyLabel"
+        android:orientation="vertical"/>
+</RelativeLayout>
+</ScrollView>
