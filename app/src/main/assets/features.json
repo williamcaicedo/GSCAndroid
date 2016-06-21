@@ -1,0 +1,484 @@
+{
+  "features": [
+    {
+      "id": 1,
+      "name": "Hipotonicidad"
+    },
+    {
+      "id": 2,
+      "name": "Hipertonicidad"
+    },
+    {
+      "id": 3,
+      "name": "Ataxia"
+    },
+    {
+      "id": 4,
+      "name": "Sordera"
+    },
+    {
+      "id": 5,
+      "name": "Encefalocele"
+    },
+    {
+      "id": 6,
+      "name": "Hidrocefalia"
+    },
+    {
+      "id": 7,
+      "name": "Microcefalia"
+    },
+    {
+      "id": 8,
+      "name": "Macrocr\u00e1nea"
+    },
+    {
+      "id": 9,
+      "name": "Craniosinostosis y/o braquicefalia"
+    },
+    {
+      "id": 10,
+      "name": "Cierre tard\u00edo de fontanelas"
+    },
+    {
+      "id": 11,
+      "name": "Abombamiento frontal, frente y/o arcos supraorbitarios"
+    },
+    {
+      "id": 12,
+      "name": "Anomal\u00edas en el patr\u00f3n de cuero cabelludo y vello facial (incluye cabello ensortijado, proyecci\u00f3n a mejillas, etc.)"
+    },
+    {
+      "id": 13,
+      "name": "Facies plana"
+    },
+    {
+      "id": 14,
+      "name": "Facies redonda"
+    },
+    {
+      "id": 15,
+      "name": "Facies triangular"
+    },
+    {
+      "id": 16,
+      "name": "Facies en m\u00e1scara"
+    },
+    {
+      "id": 17,
+      "name": "Facies grosera"
+    },
+    {
+      "id": 18,
+      "name": "Asimetr\u00eda facial"
+    },
+    {
+      "id": 19,
+      "name": "Hipertelorismo o hipotelorismo"
+    },
+    {
+      "id": 20,
+      "name": "Distopia cantorum"
+    },
+    {
+      "id": 21,
+      "name": "Pliegue epic\u00e1ntico"
+    },
+    {
+      "id": 22,
+      "name": "Desviaci\u00f3n de fisuras palpebrales"
+    },
+    {
+      "id": 23,
+      "name": "Sinofris"
+    },
+    {
+      "id": 24,
+      "name": "Proptosis y ojos prominentes"
+    },
+    {
+      "id": 25,
+      "name": "Ptosis, blefarofimosis o anquiloblefaron"
+    },
+    {
+      "id": 26,
+      "name": "Defectos en ductus lacrimales"
+    },
+    {
+      "id": 27,
+      "name": "Estrabismo"
+    },
+    {
+      "id": 28,
+      "name": "Nistagmus"
+    },
+    {
+      "id": 29,
+      "name": "Miop\u00eda"
+    },
+    {
+      "id": 30,
+      "name": "Escleras azules"
+    },
+    {
+      "id": 31,
+      "name": "Microftalmia"
+    },
+    {
+      "id": 32,
+      "name": "Coloboma o una de sus variantes"
+    },
+    {
+      "id": 33,
+      "name": "Anomal\u00edas del iris"
+    },
+    {
+      "id": 34,
+      "name": "Glaucoma"
+    },
+    {
+      "id": 35,
+      "name": "Anomal\u00edas del tama\u00f1o o la forma de la c\u00f3rnea"
+    },
+    {
+      "id": 36,
+      "name": "Opacidad corneana"
+    },
+    {
+      "id": 37,
+      "name": "Cataratas y/o luxaci\u00f3n de cristalino"
+    },
+    {
+      "id": 38,
+      "name": "Anomal\u00edas de pigmentaci\u00f3n retiniana"
+    },
+    {
+      "id": 39,
+      "name": "Desprendimiento de retina"
+    },
+    {
+      "id": 40,
+      "name": "Puente nasal deprimido"
+    },
+    {
+      "id": 41,
+      "name": "Puente nasal o nariz prominente"
+    },
+    {
+      "id": 42,
+      "name": "Nariz peque\u00f1a"
+    },
+    {
+      "id": 43,
+      "name": "Hipoplasia de alas nasales o nariz en \"pico de loro\""
+    },
+    {
+      "id": 44,
+      "name": "Atresia de coanas"
+    },
+    {
+      "id": 45,
+      "name": "Hipoplasia malar o mediofacial"
+    },
+    {
+      "id": 46,
+      "name": "Hipoplasia maxilar"
+    },
+    {
+      "id": 47,
+      "name": "Micrognatia e hipoplasia mandibular"
+    },
+    {
+      "id": 48,
+      "name": "Prognatismo"
+    },
+    {
+      "id": 49,
+      "name": "Labio leporino y/o paladar hendido y/o \u00favula b\u00edfida"
+    },
+    {
+      "id": 50,
+      "name": "Filtro anormal"
+    },
+    {
+      "id": 51,
+      "name": "Micro o macrostom\u00eda"
+    },
+    {
+      "id": 52,
+      "name": "Lengua hendida o irregular en forma y/o posici\u00f3n"
+    },
+    {
+      "id": 53,
+      "name": "Macroglosia o microglosia"
+    },
+    {
+      "id": 54,
+      "name": "Anomal\u00edas en la laringe"
+    },
+    {
+      "id": 55,
+      "name": "Anodoncia o hipodoncia"
+    },
+    {
+      "id": 56,
+      "name": "Otras anomal\u00edas dentales"
+    },
+    {
+      "id": 57,
+      "name": "Oidos de implantaci\u00f3n baja o rotados"
+    },
+    {
+      "id": 58,
+      "name": "Pabellones auriculares grandes"
+    },
+    {
+      "id": 59,
+      "name": "Malformaci\u00f3n auricular incluyendo ap\u00e9ndices pre-auriculares"
+    },
+    {
+      "id": 60,
+      "name": "Cuello redundante"
+    },
+    {
+      "id": 61,
+      "name": "Cuello corto"
+    },
+    {
+      "id": 62,
+      "name": "Hipoplasia u otras anomal\u00edas de clav\u00edculas, costillas, omoplato"
+    },
+    {
+      "id": 63,
+      "name": "Pectus excavatum o carinatum"
+    },
+    {
+      "id": 64,
+      "name": "Hipoplasia o ausencia del pectoral mayor"
+    },
+    {
+      "id": 65,
+      "name": "Caja tor\u00e1cica peque\u00f1a o anormal"
+    },
+    {
+      "id": 66,
+      "name": "Escoliosis y/o c\u00edfosis y/o lordosis"
+    },
+    {
+      "id": 67,
+      "name": "Otros defectos vertebrales"
+    },
+    {
+      "id": 68,
+      "name": "Aracnodactilia y/o manos y/o pies grandes"
+    },
+    {
+      "id": 69,
+      "name": "Braquidactilia y/o manos y/o pies peque\u00f1os"
+    },
+    {
+      "id": 70,
+      "name": "Camptodactilia"
+    },
+    {
+      "id": 71,
+      "name": "Fracturas"
+    },
+    {
+      "id": 72,
+      "name": "Extremidades cortas"
+    },
+    {
+      "id": 73,
+      "name": "Reducci\u00f3n de extremidades"
+    },
+    {
+      "id": 74,
+      "name": "Clinodactilia"
+    },
+    {
+      "id": 75,
+      "name": "Dedos gruesos y/o falange distal anormal en forma o tama\u00f1o"
+    },
+    {
+      "id": 76,
+      "name": "Anomal\u00edas del pulgar radio o grueso artejo hallux valgus"
+    },
+    {
+      "id": 77,
+      "name": "Hipoplasia o agenesia metacarp\u00edana o fal\u00e1ngica"
+    },
+    {
+      "id": 78,
+      "name": "Polidactilia"
+    },
+    {
+      "id": 79,
+      "name": "Sindactilia"
+    },
+    {
+      "id": 80,
+      "name": "Displasia patelar o de tibia encurvamiento de huesos largos"
+    },
+    {
+      "id": 81,
+      "name": "Hipoplasia ungueal"
+    },
+    {
+      "id": 82,
+      "name": "Transtornos en dermatoglifos o pliegues de ﬂexi\u00f3n hoyuelos"
+    },
+    {
+      "id": 83,
+      "name": "Contracturas articulares o motilidad articular disminuida"
+    },
+    {
+      "id": 84,
+      "name": "Hiperelasticidad o luxaciones articulares"
+    },
+    {
+      "id": 85,
+      "name": "Pie equino varo"
+    },
+    {
+      "id": 86,
+      "name": "Pigmentaci\u00f3n anormal en piel"
+    },
+    {
+      "id": 87,
+      "name": "Piel gruesa o icti\u00f3tica o redundante"
+    },
+    {
+      "id": 88,
+      "name": "Hemangiomas o telangiectasias equ\u00edmosis f\u00edstulas A-V v\u00e1rices"
+    },
+    {
+      "id": 89,
+      "name": "Dermatitis fotosensitiva. eczema o eritema fragilidad capilar y/o de piel"
+    },
+    {
+      "id": 90,
+      "name": "Alopecia"
+    },
+    {
+      "id": 91,
+      "name": "Hirsut\u00edsmo"
+    },
+    {
+      "id": 92,
+      "name": "Otras anomal\u00edas del cabello"
+    },
+    {
+      "id": 93,
+      "name": "Anomal\u00edas de sudoraci\u00f3n"
+    },
+    {
+      "id": 94,
+      "name": "Cardiopat\u00edas"
+    },
+    {
+      "id": 95,
+      "name": "Hernias onfalocele o defectos de la pared abdominal"
+    },
+    {
+      "id": 96,
+      "name": "Hepatomegalia hepatoesplenomegal\u00eda o malformaciones hep\u00e1ticas o spl\u00e9nicas"
+    },
+    {
+      "id": 97,
+      "name": "F\u00edstula traqueoesof\u00e1gica o atresia"
+    },
+    {
+      "id": 98,
+      "name": "Malformaci\u00f3n o disfunci\u00f3n renal o de v\u00edas urinarias"
+    },
+    {
+      "id": 99,
+      "name": "Anomal\u00eda genital incluyendo criptorquidia"
+    },
+    {
+      "id": 100,
+      "name": "Anomal\u00edas vaginales"
+    },
+    {
+      "id": 101,
+      "name": "Defectos anorectales"
+    },
+    {
+      "id": 102,
+      "name": "H\u00edpogonadismo"
+    },
+    {
+      "id": 103,
+      "name": "Otros transtornos endocrinol\u00f3gicos"
+    },
+    {
+      "id": 104,
+      "name": "Lipoatrofia y/o mioatrofia"
+    },
+    {
+      "id": 105,
+      "name": "Inmunodeficiencia"
+    },
+    {
+      "id": 106,
+      "name": "Anemia"
+    },
+    {
+      "id": 107,
+      "name": "Trombocitopenia pancitopenia"
+    },
+    {
+      "id": 108,
+      "name": "Leucocitosis policitemia"
+    },
+    {
+      "id": 109,
+      "name": "Malignidad linforeticular"
+    },
+    {
+      "id": 110,
+      "name": "Otras malignidades"
+    },
+    {
+      "id": 111,
+      "name": "Obesidad"
+    },
+    {
+      "id": 112,
+      "name": "Macrosom\u00eda, sobrecrecimiento"
+    },
+    {
+      "id": 113,
+      "name": "Asimetr\u00eda corporal"
+    },
+    {
+      "id": 114,
+      "name": "Retardo mental"
+    },
+    {
+      "id": 115,
+      "name": "Baja talla retardo en el crecimiento"
+    },
+    {
+      "id": 116,
+      "name": "Crecimiento acelerado o talla alta"
+    },
+    {
+      "id": 117,
+      "name": "Atroﬁa o hipoplasia cerebelar"
+    },
+    {
+      "id": 118,
+      "name": "Miotonia"
+    },
+    {
+      "id": 119,
+      "name": "Quistes branquiales"
+    },
+    {
+      "id": 120,
+      "name": "Tronco corto"
+    }
+  ]
+}

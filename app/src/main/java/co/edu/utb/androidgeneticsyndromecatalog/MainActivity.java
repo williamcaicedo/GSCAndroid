@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import co.edu.utb.androidgeneticsyndromecatalog.data.SyndromesAdapter;
+import co.edu.utb.androidgeneticsyndromecatalog.entity.Feature;
 import co.edu.utb.androidgeneticsyndromecatalog.entity.Syndrome;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView syndromeReciclerView;
     private SyndromesAdapter sAdapter;
 
-    private List<Syndrome> syndromeData = new ArrayList<Syndrome>();
+    private List<Syndrome> syndromeData = new ArrayList<>();
+    private List<Feature> featureData = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,14 +87,30 @@ public class MainActivity extends AppCompatActivity {
 
         String json = null;
         try {
-            InputStream is = getAssets().open("syndromes.json");
+
+            InputStream is = getAssets().open("features.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
             json = new String(buffer, "UTF-8");
-
             JSONObject obj = new JSONObject(json);
+
+            JSONArray features = obj.getJSONArray("features");
+
+            for (int i = 0; i < features.length(); i++) {
+                JSONObject f = features.getJSONObject(i);
+
+            }
+
+            is = getAssets().open("syndromes.json");
+            size = is.available();
+            buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+
+            obj = new JSONObject(json);
 
             JSONArray syndromes = obj.getJSONArray("syndromes");
 
