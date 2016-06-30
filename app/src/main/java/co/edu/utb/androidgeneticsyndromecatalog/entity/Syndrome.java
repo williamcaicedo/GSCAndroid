@@ -23,11 +23,13 @@ public class Syndrome implements Parcelable {
     private String evolution;
     private String clinicalExams;
     private String[] bibliography;
+    private List<Feature> features;
 
     public Syndrome(){}
 
     public Syndrome(int id, String name, String synonym, String inheritance, String retardation,
-                    String retardationNotes, String evolution, String clinicalExams, String[] bibliography) {
+                    String retardationNotes, String evolution, String clinicalExams,
+                    String[] bibliography, List<Feature> features) {
 
         this.id = id;
         this.name = name;
@@ -38,6 +40,7 @@ public class Syndrome implements Parcelable {
         this.evolution = evolution;
         this.clinicalExams = clinicalExams;
         this.bibliography = bibliography;
+        this.features = features;
     }
 
     public Syndrome(Parcel in){
@@ -52,6 +55,7 @@ public class Syndrome implements Parcelable {
         List<String> bib = new ArrayList<>();
         in.readStringList(bib);
         bibliography = bib.toArray(new String[]{});
+        features = Arrays.asList(in.createTypedArray(Feature.CREATOR));
     }
 
     public int getId() {
@@ -126,6 +130,14 @@ public class Syndrome implements Parcelable {
         this.bibliography = bibliography;
     }
 
+    public List<Feature> getFeatures() {
+        return features;
+    }
+
+    public void setFeatures(List<Feature> features) {
+        this.features = features;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -142,6 +154,7 @@ public class Syndrome implements Parcelable {
         dest.writeString(evolution);
         dest.writeString(clinicalExams);
         dest.writeStringList(Arrays.asList(bibliography));
+        dest.writeTypedArray(features.toArray(new Feature[features.size()]),0);
     }
 
     public static final Parcelable.Creator<Syndrome> CREATOR = new Parcelable.Creator<Syndrome>() {

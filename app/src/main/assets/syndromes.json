@@ -1,5 +1,5 @@
 {
-  "features": [
+  "syndromes": [
   {
     "id":  28,
     "name":  "S\u00edndrome de Carpenter",
@@ -932,7 +932,7 @@
     "inheritance":  "Autos\u00f3mica dominante",
     "retardation":  true,
     "retardationNotes":  "",
-    "evolution":  "Cerca de la mitad de los pacientes presentan apneas obstructivas durante el sue\u00f1o, en el per\u00edodo neonatal. En la infancia y la ni\u00f1ez usualmente se presentan hipoton\u00eda y alteraciones de las v\u00edas respiratorias altas. Se observa retardo leve en el desarro110 psico-motor y del lenguaje. Todos presentan problemas de aprendizaje, aunque no todos presentan retardo mental. Usualmente hay una voz hipernasal (se cree que por hipoplasia de adenoides). Se ha descrito la anomal\u00eda de Di-George (hipoplasia t\u00edmica y de para-tiroides con cardiopat\u00eda) asociada a este s\u00edndrome. Algunos presentan episodios de broncoespasmo severo. Son t\u00edpicos los dedos de las manos delgados con falanges distales en forma de punta.",
+    "evolution":  "Cerca de la mitad de los pacientes presentan apneas obstructivas durante el sue\u00f1o, en el per\u00edodo neonatal. En la infancia y la ni\u00f1ez usualmente se presentan hipoton\u00eda y alteraciones de las v\u00edas respiratorias altas. Se observa retardo leve en el desarrollo psico-motor y del lenguaje. Todos presentan problemas de aprendizaje, aunque no todos presentan retardo mental. Usualmente hay una voz hipernasal (se cree que por hipoplasia de adenoides). Se ha descrito la anomal\u00eda de Di-George (hipoplasia t\u00edmica y de para-tiroides con cardiopat\u00eda) asociada a este s\u00edndrome. Algunos presentan episodios de broncoespasmo severo. Son t\u00edpicos los dedos de las manos delgados con falanges distales en forma de punta.",
     "clinicalExams":  "El diagn\u00f3stico es cl\u00ednico. Se recomienda evaluaci\u00f3n cardiol\u00f3gica y auditiva a todos los pacientes.",
     "bibliography":  ["JEDELE, K. B. et al. (1992). \"Velo-Cardio-Facial Syndrome Associated With Tetralogy of Fallot\", Pediatrics, Vol. 89, No. 5: 915-919."],
     "features":  [1, 4, 7, 41, 45, 49, 59, 84, 94, 114, 115]

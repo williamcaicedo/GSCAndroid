@@ -23,14 +23,13 @@ public class SyndromesAdapter extends RecyclerView.Adapter<SyndromesAdapter.MyVi
     private final CustomListItemClickListener clickListener;
     private List<Syndrome> allSyndromes;
     private List<Syndrome> syndromeList;
-    private CustomFilter sFilter;
+    private Filter sFilter;
 
 
     public SyndromesAdapter(List<Syndrome> syndromeList, CustomListItemClickListener clickListener) {
         this.allSyndromes = syndromeList;
         this.syndromeList = syndromeList;
         this.clickListener = clickListener;
-        this.sFilter = new CustomFilter(this);
     }
 
     @Override
@@ -63,6 +62,24 @@ public class SyndromesAdapter extends RecyclerView.Adapter<SyndromesAdapter.MyVi
     @Override
     public Filter getFilter() {
         return sFilter;
+    }
+
+    public void setFilter(Filter filter) { sFilter = filter;}
+
+    public List<Syndrome> getSyndromeList() {
+        return syndromeList;
+    }
+
+    public void setSyndromeList(List<Syndrome> syndromeList) {
+        this.syndromeList = syndromeList;
+    }
+
+    public List<Syndrome> getAllSyndromes() {
+        return allSyndromes;
+    }
+
+    public void setAllSyndromes(List<Syndrome> allSyndromes) {
+        this.allSyndromes = allSyndromes;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

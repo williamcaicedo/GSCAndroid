@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="co.edu.utb.androidgeneticsyndromecatalog.MainActivity">
+
+    <!--MultiAutoCompleteTextView
+        android:id="@+id/feature_search_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp"
+        android:textSize="14dp"
+        android:hint="@string/feature_search_hint"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" /-->
+
+    <co.edu.utb.androidgeneticsyndromecatalog.FeaturesCompletionView
+        android:id="@+id/feature_search_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp"
+        android:hint="@string/feature_search_hint"
+        android:imeOptions="actionDone"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14dp"
+        android:nextFocusDown="@+id/editText"
+        android:inputType="text|textNoSuggestions|textMultiLine"
+        android:focusableInTouchMode="true" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id='@+id/feature_search_syndrome_recycler_view'
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/feature_search_box"
+        android:scrollbars="vertical" />
+</LinearLayout>

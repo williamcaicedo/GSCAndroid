@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import co.edu.utb.androidgeneticsyndromecatalog.entity.Feature;
 import co.edu.utb.androidgeneticsyndromecatalog.entity.Syndrome;
 import co.edu.utb.androidgeneticsyndromecatalog.util.BitmapUtils;
 
@@ -54,6 +55,15 @@ public class DetailActivity extends AppCompatActivity {
             entry.setTextColor(ContextCompat.getColor(this, R.color.name));
             entry.setText(b);
             bib.addView(entry);
+        }
+
+        LinearLayout feats = (LinearLayout) findViewById(R.id.features);
+        for(Feature f : s.getFeatures()) {
+            TextView entry = new TextView(this);
+            entry.setPadding(0,0,0,5);
+            entry.setTextColor(ContextCompat.getColor(this, R.color.name));
+            entry.setText(f.getName());
+            feats.addView(entry);
         }
 
     }

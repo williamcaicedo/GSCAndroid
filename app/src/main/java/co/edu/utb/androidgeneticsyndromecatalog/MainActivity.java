@@ -1,18 +1,20 @@
 package co.edu.utb.androidgeneticsyndromecatalog;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.MotionEvent;
+import android.support.annotation.Nullable;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -21,67 +23,132 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
-import co.edu.utb.androidgeneticsyndromecatalog.data.SyndromesAdapter;
 import co.edu.utb.androidgeneticsyndromecatalog.entity.Feature;
 import co.edu.utb.androidgeneticsyndromecatalog.entity.Syndrome;
+import co.edu.utb.androidgeneticsyndromecatalog.fragment.FeatureSearchFragment;
+import co.edu.utb.androidgeneticsyndromecatalog.fragment.NameSearchFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements DetailActivityLauncher{
 
     public final static String SYNDROME = "co.edu.utb.androidgeneticsyndromecatalog.SYNDROME";
 
 
-    private RecyclerView syndromeReciclerView;
-    private SyndromesAdapter sAdapter;
 
-    private List<Syndrome> syndromeData = new ArrayList<>();
-    private List<Feature> featureData = new ArrayList<>();
+    private ListView drawerItemList;
+    private String[] drawerOptions;
+    private DrawerLayout drawerLayout;
+    private CharSequence title;
+    private CharSequence drawerTitle;
+    private ActionBarDrawerToggle drawerToggle;
+
+    public static List<Syndrome> syndromeData = new ArrayList<>();
+    public static List<Feature> featureData = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        syndromeReciclerView = (RecyclerView) findViewById(R.id.syndrome_recycler_view);
-        sAdapter  = new SyndromesAdapter(syndromeData, new CustomListItemClickListener() {
-            @Override
-            public void onItemClick(View v, int syndromeId) {
-                Syndrome s = new Syndrome();
-                s.setId(syndromeId);
-                s = syndromeData.get(syndromeData.indexOf(s));
-                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-
-                intent.putExtra(MainActivity.SYNDROME, s);
-                startActivity(intent);
-            }
-        });
-        RecyclerView.LayoutManager sLayoutManager = new LinearLayoutManager(getApplicationContext());
-        syndromeReciclerView.setLayoutManager(sLayoutManager);
-        syndromeReciclerView.setItemAnimator(new DefaultItemAnimator());
-        syndromeReciclerView.setAdapter(sAdapter);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
 
         getJsonData();
 
-        TextView searchBox = (TextView)findViewById(R.id.search_box);
-        searchBox.addTextChangedListener(new TextWatcher(){
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        title = drawerTitle = getTitle();
+        drawerOptions = getResources().getStringArray(R.array.drawer_items);
+        drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
+        drawerItemList = (ListView)findViewById(R.id.left_drawer);
+        drawerItemList.setAdapter(new ArrayAdapter<String>(this, R.layout.drawer_item, drawerOptions));
 
+        drawerItemList.setOnItemClickListener(new DrawerItemClickListener());
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
+        drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.drawer_open,
+                R.string.drawer_close){
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                getSupportActionBar().setTitle(drawerTitle);
             }
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                sAdapter.getFilter().filter(s.toString());
+            public void onDrawerClosed(View drawerView) {
+                super.onDrawerClosed(drawerView);
+                getSupportActionBar().setTitle(title);
             }
+        };
 
-            @Override
-            public void afterTextChanged(Editable s) {
+        drawerLayout.addDrawerListener(drawerToggle);
+        if (savedInstanceState == null) {
+            selectDrawerItem(0);
+        }
 
-            }
-        });
     }
 
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        drawerToggle.syncState();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        drawerToggle.onConfigurationChanged(newConfig);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (drawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void selectDrawerItem(int position) {
+
+        Bundle args = new Bundle();
+        FragmentManager fragmentManager = getFragmentManager();
+        Fragment fragment = (position == 0) ?
+                new FeatureSearchFragment()
+                : new NameSearchFragment();
+
+        fragmentManager.beginTransaction()
+                .replace(R.id.content_frame, fragment)
+                .commit();
+
+        drawerItemList.setItemChecked(position, true);
+        setTitle(drawerOptions[position]);
+        drawerLayout.closeDrawer(drawerItemList);
+
+    }
+
+
+    @Override
+    public void setTitle(CharSequence title) {
+        //mTitle = title;
+        getSupportActionBar().setTitle(title);
+    }
+
+
+    private Feature findFeatureById(int id) {
+        int index = Collections.binarySearch(featureData, new Feature(id, ""), new Comparator<Feature>() {
+            @Override
+            public int compare(Feature lhs, Feature rhs) {
+                if (lhs.getId() < rhs.getId()) return -1;
+                if (lhs.getId() == rhs.getId()) return 0;
+                return 1;
+            }
+        });
+        if (index >= 0 && index < featureData.size())
+            return featureData.get(index);
+        return null;
+    }
 
     private void getJsonData() {
 
@@ -100,6 +167,8 @@ public class MainActivity extends AppCompatActivity {
 
             for (int i = 0; i < features.length(); i++) {
                 JSONObject f = features.getJSONObject(i);
+                Feature feature = new Feature(f.getInt("id"), f.getString("name"));
+                featureData.add(feature);
 
             }
 
@@ -136,14 +205,16 @@ public class MainActivity extends AppCompatActivity {
                 }catch(JSONException je) {
                     retardationNotes = "";
                 }
-
+                List<Feature> syndromeFeatures = new ArrayList<>();
+                JSONArray featIds = s.getJSONArray("features");
+                for (int j = 0; j < featIds.length(); j++) {
+                    syndromeFeatures.add(findFeatureById(featIds.getInt(j)));
+                }
 
                 syndromeData.add(new Syndrome(s.getInt("id"), s.getString("name"), s.getString("synonym"),
                         s.getString("inheritance"), retardation, retardationNotes, s.getString("evolution"),
-                        s.getString("clinicalExams"), bib));
+                        s.getString("clinicalExams"), bib, syndromeFeatures));
             }
-
-            sAdapter.notifyDataSetChanged();
 
 
         } catch (IOException e) {
@@ -153,10 +224,23 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+    }
 
+    @Override
+    public void launchActivity(Syndrome s) {
+        Intent intent = new Intent(this, DetailActivity.class);
 
+        intent.putExtra(MainActivity.SYNDROME, s);
+        startActivity(intent);
+    }
 
+    private class DrawerItemClickListener implements ListView.OnItemClickListener {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+            selectDrawerItem(position);
+
+        }
     }
 
 }

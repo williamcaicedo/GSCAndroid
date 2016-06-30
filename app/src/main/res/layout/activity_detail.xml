@@ -60,10 +60,26 @@
         android:textColor="@color/name"/>
 
     <TextView
-        android:id="@+id/evolutionLabel"
+        android:id="@+id/featuresLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/inheritanceTextView"
+        android:paddingTop="5dp"
+        android:textColor="@color/synonym"
+        android:text="Características Clínicas:"/>
+
+    <LinearLayout
+        android:id="@+id/features"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/featuresLabel"
+        android:orientation="vertical"/>
+
+    <TextView
+        android:id="@+id/evolutionLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/features"
         android:paddingTop="5dp"
         android:textColor="@color/synonym"
         android:text="Evolución:"/>
