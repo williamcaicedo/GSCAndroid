@@ -1,13 +1,17 @@
 package co.edu.utb.androidgeneticsyndromecatalog.fragment;
 
+import android.annotation.TargetApi;
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.test.suitebuilder.annotation.Suppress;
 import android.view.View;
 
 import co.edu.utb.androidgeneticsyndromecatalog.CustomListItemClickListener;
+import co.edu.utb.androidgeneticsyndromecatalog.DetailActivity;
 import co.edu.utb.androidgeneticsyndromecatalog.DetailActivityLauncher;
 import co.edu.utb.androidgeneticsyndromecatalog.MainActivity;
 import co.edu.utb.androidgeneticsyndromecatalog.data.filter.CustomFilter;
@@ -24,8 +28,20 @@ public abstract class AbstractFragment extends Fragment{
     protected DetailActivityLauncher launcher;
 
     @Override
+    @SuppressWarnings("deprecation")
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        bindLauncher(activity);
+    }
+
+    @TargetApi(23)
+    @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        bindLauncher(context);
+    }
+
+    private void bindLauncher(Context context) {
         launcher = (DetailActivityLauncher)context;
     }
 
