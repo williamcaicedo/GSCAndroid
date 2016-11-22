@@ -8,6 +8,8 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
+import com.futuremind.recyclerviewfastscroll.SectionTitleProvider;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +20,7 @@ import co.edu.utb.androidgeneticsyndromecatalog.entity.Syndrome;
 /**
  * Created by william on 14/06/16.
  */
-public class SyndromesAdapter extends RecyclerView.Adapter<SyndromesAdapter.MyViewHolder> implements Filterable {
+public class SyndromesAdapter extends RecyclerView.Adapter<SyndromesAdapter.MyViewHolder> implements Filterable, SectionTitleProvider {
 
     private final CustomListItemClickListener clickListener;
     private List<Syndrome> allSyndromes;
@@ -82,6 +84,11 @@ public class SyndromesAdapter extends RecyclerView.Adapter<SyndromesAdapter.MyVi
         this.allSyndromes = allSyndromes;
     }
 
+    @Override
+    public String getSectionTitle(int position) {
+        return syndromeList.get(position).getName().substring(0, 1);
+    }
+
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         public int syndromeId;
@@ -94,7 +101,7 @@ public class SyndromesAdapter extends RecyclerView.Adapter<SyndromesAdapter.MyVi
         }
     }
 
-    private class CustomFilter extends Filter {
+    /*private class CustomFilter extends Filter {
 
         private final SyndromesAdapter sAdapter;
 
@@ -134,5 +141,5 @@ public class SyndromesAdapter extends RecyclerView.Adapter<SyndromesAdapter.MyVi
         protected void publishResults(CharSequence constraint, FilterResults results) {
             this.sAdapter.notifyDataSetChanged();
         }
-    }
+    }*/
 }

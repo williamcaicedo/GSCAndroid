@@ -36,7 +36,7 @@ public class NameSearchFragment extends AbstractFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        this.setUpRecyclerView(R.id.syndrome_recycler_view, new SyndromeNameFilter());
+        this.setUpRecyclerView(R.id.syndrome_recycler_view, R.id.fastscroll, new SyndromeNameFilter());
         setUpSearchBox();
 
     }

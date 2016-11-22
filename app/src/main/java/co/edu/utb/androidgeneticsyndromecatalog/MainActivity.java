@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity implements DetailActivityLau
     private CharSequence drawerTitle;
     private ActionBarDrawerToggle drawerToggle;
 
-    public static List<Syndrome> syndromeData = new ArrayList<>();
-    public static List<Feature> featureData = new ArrayList<>();
+    public static List<Syndrome> syndromeData;
+    public static List<Feature> featureData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -151,7 +151,8 @@ public class MainActivity extends AppCompatActivity implements DetailActivityLau
     }
 
     private void getJsonData() {
-
+        MainActivity.syndromeData  = new ArrayList<>();
+        MainActivity.featureData = new ArrayList<>();
         String json = null;
         try {
 
@@ -215,6 +216,13 @@ public class MainActivity extends AppCompatActivity implements DetailActivityLau
                         s.getString("inheritance"), retardation, retardationNotes, s.getString("evolution"),
                         s.getString("clinicalExams"), bib, syndromeFeatures));
             }
+
+            Collections.sort(syndromeData, new Comparator<Syndrome>() {
+                @Override
+                public int compare(Syndrome s1, Syndrome s2) {
+                    return s1.getName().compareTo(s2.getName());
+                }
+            });
 
 
         } catch (IOException e) {

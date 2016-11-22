@@ -7,15 +7,15 @@ import android.content.Context;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.test.suitebuilder.annotation.Suppress;
 import android.view.View;
 
+import com.futuremind.recyclerviewfastscroll.FastScroller;
+import co.edu.utb.androidgeneticsyndromecatalog.R;
 import co.edu.utb.androidgeneticsyndromecatalog.CustomListItemClickListener;
-import co.edu.utb.androidgeneticsyndromecatalog.DetailActivity;
 import co.edu.utb.androidgeneticsyndromecatalog.DetailActivityLauncher;
 import co.edu.utb.androidgeneticsyndromecatalog.MainActivity;
-import co.edu.utb.androidgeneticsyndromecatalog.data.filter.CustomFilter;
 import co.edu.utb.androidgeneticsyndromecatalog.data.SyndromesAdapter;
+import co.edu.utb.androidgeneticsyndromecatalog.data.filter.CustomFilter;
 import co.edu.utb.androidgeneticsyndromecatalog.entity.Syndrome;
 
 /**
@@ -45,9 +45,10 @@ public abstract class AbstractFragment extends Fragment{
         launcher = (DetailActivityLauncher)context;
     }
 
-    protected RecyclerView setUpRecyclerView(int id, CustomFilter filter) {
+    protected RecyclerView setUpRecyclerView(int id, int scrollerId, CustomFilter filter) {
         syndromeRecyclerView = (RecyclerView) getActivity().findViewById(id);
-         sAdapter  = new SyndromesAdapter(MainActivity.syndromeData, new CustomListItemClickListener() {
+        FastScroller fastScroller = (FastScroller) getActivity().findViewById(scrollerId);
+        sAdapter  = new SyndromesAdapter(MainActivity.syndromeData, new CustomListItemClickListener() {
             @Override
             public void onItemClick(View v, int syndromeId) {
                 Syndrome s = new Syndrome();
@@ -63,6 +64,7 @@ public abstract class AbstractFragment extends Fragment{
         syndromeRecyclerView.setLayoutManager(sLayoutManager);
         syndromeRecyclerView.setItemAnimator(new DefaultItemAnimator());
         syndromeRecyclerView.setAdapter(sAdapter);
+        fastScroller.setRecyclerView(syndromeRecyclerView);
         return syndromeRecyclerView;
     }
 }

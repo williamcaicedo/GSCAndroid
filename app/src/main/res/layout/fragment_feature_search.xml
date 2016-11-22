@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -49,6 +49,12 @@
         android:id='@+id/feature_search_syndrome_recycler_view'
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/feature_search_box"
-        android:scrollbars="vertical" />
-</LinearLayout>
+        android:layout_below="@id/feature_search_box" />
+
+    <com.futuremind.recyclerviewfastscroll.FastScroller
+        android:id="@+id/fastscroll"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>

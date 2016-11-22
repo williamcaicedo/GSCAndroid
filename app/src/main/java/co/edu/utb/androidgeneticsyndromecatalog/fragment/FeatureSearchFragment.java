@@ -55,7 +55,7 @@ public class FeatureSearchFragment extends AbstractFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        this.setUpRecyclerView(R.id.feature_search_syndrome_recycler_view, new SyndromeFeatureFilter());
+        this.setUpRecyclerView(R.id.feature_search_syndrome_recycler_view, R.id.fastscroll, new SyndromeFeatureFilter());
         setUpFeatureSearchBox();
 
     }
