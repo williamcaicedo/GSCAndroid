@@ -44,12 +44,56 @@
         android:layout_below="@id/synonymLabel"
         android:textColor="@color/name"/>
 
+    <TextView
+        android:id="@+id/geneLocusLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/synonymTextView"
+        android:textColor="@color/synonym"
+        android:text="Gen/locus:"/>
+
+    <TextView
+        android:id="@+id/geneLocusTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/geneLocusLabel"
+        android:textColor="@color/name"/>
+
+    <TextView
+        android:id="@+id/siteLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/geneLocusTextView"
+        android:textColor="@color/synonym"
+        android:text="Localización:"/>
+
+    <TextView
+        android:id="@+id/siteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/siteLabel"
+        android:textColor="@color/name"/>
+
+    <TextView
+        android:id="@+id/geneticAnomalyLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/siteTextView"
+        android:textColor="@color/synonym"
+        android:text="Anomalía Genética:"/>
+
+    <TextView
+        android:id="@+id/geneticAnomalyTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/geneticAnomalyLabel"
+        android:textColor="@color/name"/>
 
     <TextView
         android:id="@+id/inheritanceLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/synonymTextView"
+        android:layout_below="@id/geneticAnomalyTextView"
         android:textColor="@color/synonym"
         android:text="Herencia:"/>
     <TextView
@@ -118,12 +162,29 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/examsLabel"
         android:textColor="@color/name"/>
+    <TextView
+        android:id="@+id/omimLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/examsTextView"
+        android:paddingTop="5dp"
+        android:textColor="@color/synonym"
+        android:text="Enlace OMIM:"/>
+
+    <TextView
+        android:id="@+id/omimTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/omimLabel"
+        android:autoLink="web"
+        android:linksClickable="true"
+        android:textColor="@color/name"/>
 
     <TextView
         android:id="@+id/bibliographyLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/examsTextView"
+        android:layout_below="@id/omimTextView"
         android:paddingTop="5dp"
         android:textColor="@color/synonym"
         android:text="Bibliografía:"/>

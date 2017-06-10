@@ -187,6 +187,7 @@ public class MainActivity extends AppCompatActivity implements DetailActivityLau
 
 
             for (int i = 0; i < syndromes.length(); i++) {
+
                 JSONObject s = syndromes.getJSONObject(i);
                 JSONArray bibJson = s.getJSONArray("bibliography");
                 String[] bib = new String[bibJson.length()];
@@ -213,8 +214,9 @@ public class MainActivity extends AppCompatActivity implements DetailActivityLau
                 }
 
                 syndromeData.add(new Syndrome(s.getInt("id"), s.getString("name"), s.getString("synonym"),
+                        s.getString("site"), s.getString("gene/locus"), s.getString("genetic_anomaly"),
                         s.getString("inheritance"), retardation, retardationNotes, s.getString("evolution"),
-                        s.getString("clinicalExams"), bib, syndromeFeatures));
+                        s.getString("clinicalExams"), s.getString("omim"), bib, syndromeFeatures));
             }
 
             Collections.sort(syndromeData, new Comparator<Syndrome>() {

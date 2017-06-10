@@ -2,81 +2,112 @@
 <items version="2" >
 
     <item
-        jar="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        is-multidex="true"
+        jar="/Users/william/AndroidProjects/GSCAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
-        revision="23.0.3"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_7cb132ff92d9f219c361f3a752305c364acc5991/classes.dex" />
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/william/AndroidProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_43d1fefdb55d4bcdbbba78183d49d229d2afabef/classes.dex" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/william/.android/build-cache/a4282ed23fd59e28aae1861b7d4c0bcb6215239a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/william/AndroidProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1d10f849a1a3e30ae99cf9cc53b590d1dc40d86a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/william/.android/build-cache/ece55385eb7ced24dbe024dac866e75949c85f54/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/william/AndroidProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_dc63387ce45499c7cdec0dbf53ed5dd63fb3476f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/william/.android/build-cache/79a95418acf70e7b1cc3eda2e61c339f380686a6/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="da8f28667ce1e112c2087f130725f638a76b3e98">
+        <dex dex="/Users/william/AndroidProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e48eb25c3c4dba94bc0570f7cf48525d6cad53d4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/william/.android/build-cache/aa194699f0e90b5069a2d662c44aea6039cb0916/output/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/william/AndroidProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_d2a36d54bb714697dd7851b0aa27ddb3ec933210/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/william/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
         jumboMode="true"
+        optimize="true"
         revision="23.0.3"
         sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_9c7f2d4932d9372355e5eb10b21735278fc8ccaa/classes.dex" />
+        <dex dex="/Users/william/AndroidProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_9c7f2d4932d9372355e5eb10b21735278fc8ccaa/classes.dex" />
     </item>
     <item
-        jar="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/exploded-aar/com.futuremind.recyclerfastscroll/fastscroll/0.2.4/jars/classes.jar"
+        is-multidex="true"
+        jar="/Users/william/.android/build-cache/9ef59f1a6a95c868f2a241401912ec9fb363c68c/output/jars/classes.jar"
         jumboMode="true"
-        revision="23.0.3"
-        sha1="5149993d94b005b9c8f69548be8d4f139c0a55d3">
-        <dex dex="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.futuremind.recyclerfastscroll-fastscroll-0.2.4_518388275ba6fb5f6cdcc8d439695aed0b5cd09e/classes.dex" />
-    </item>
-    <item
-        jar="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/exploded-aar/com.splitwise/tokenautocomplete/2.0.7/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="da8f28667ce1e112c2087f130725f638a76b3e98">
-        <dex dex="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.splitwise-tokenautocomplete-2.0.7_79b9d12105b244191f645cad33d464bd6a771a20/classes.dex" />
-    </item>
-    <item
-        jar="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_53e9e68ec04cfb04dae9f172f09ac791b980f521/classes.dex" />
-    </item>
-    <item
-        jar="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="25fd19fae9761fdc4c17f299639b4437a31d2ecb">
-        <dex dex="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_497182fc133ea85cf61f9658e513546eb1626d1c/classes.dex" />
-    </item>
-    <item
-        jar="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_b7f47511848b1baf693929f284e1f5b9f2faf21e/classes.dex" />
-    </item>
-    <item
-        jar="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_4c6763b5e649f092d9463a57db1c59dafd69c368/classes.dex" />
-    </item>
-    <item
-        jar="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
-        <dex dex="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.4.0_52d2c04005d15139ca0c196289209bd855526b78/classes.dex" />
-    </item>
-    <item
-        jar="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
+        optimize="true"
+        revision="25.0.0"
         sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_13b20fa9ff789891ad03c345f3fa9b9626f6333d/classes.dex" />
+        <dex dex="/Users/william/AndroidProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_54a2afff92ecfbc0eeb6e54d61bc6a9302c0c9d8/classes.dex" />
     </item>
     <item
-        jar="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        is-multidex="true"
+        jar="/Users/william/.android/build-cache/aa194699f0e90b5069a2d662c44aea6039cb0916/output/jars/classes.jar"
         jumboMode="true"
-        revision="23.0.3"
-        sha1="2aa088b4afefe73dd2c0119a75a5fee4cd765e56">
-        <dex dex="/Users/william/AndroidStudioProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_632bc2985a28484d78e74262c22bdf0c85ae3303/classes.dex" />
+        optimize="true"
+        revision="25.0.0"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/william/AndroidProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_77e910f4773de0d285386a495a9adc2588470009/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/william/AndroidProjects/GSCAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6188d50be04d7906e97647ee275aeb003c6f90cc">
+        <dex dex="/Users/william/AndroidProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_e9951ba506106586ecf7c1dcf1362727ea3b524d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/william/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/william/AndroidProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_9c7f2d4932d9372355e5eb10b21735278fc8ccaa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/william/.android/build-cache/5f7e1c54dbd2ff079242e46ff9ee7f4fdb0165e3/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/william/AndroidProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_76cd65292a2e3bfdfe870cfc0586d18fc35c43fc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/william/.android/build-cache/2cedad5c5b410775d7b7a397cf1764aace49f8d2/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5149993d94b005b9c8f69548be8d4f139c0a55d3">
+        <dex dex="/Users/william/AndroidProjects/GSCAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9a5a6884bdfb88d507b0a769a4dd1aed386e83f3/classes.dex" />
     </item>
 
 </items>

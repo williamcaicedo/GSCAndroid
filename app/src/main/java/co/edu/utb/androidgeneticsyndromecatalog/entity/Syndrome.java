@@ -17,28 +17,37 @@ public class Syndrome implements Parcelable {
     private int id;
     private String name;
     private String synonym;
+    private String site;
+    private String geneLocus;
+    private String geneticAnomaly;
     private String inheritance;
     private String retardation;
     private String retardationNotes;
     private String evolution;
     private String clinicalExams;
+    private String omimLink;
     private String[] bibliography;
     private List<Feature> features;
 
     public Syndrome(){}
 
-    public Syndrome(int id, String name, String synonym, String inheritance, String retardation,
+    public Syndrome(int id, String name, String synonym, String site, String geneLocus,
+                    String geneticAnomaly, String inheritance, String retardation,
                     String retardationNotes, String evolution, String clinicalExams,
-                    String[] bibliography, List<Feature> features) {
+                    String omimLink, String[] bibliography, List<Feature> features) {
 
         this.id = id;
         this.name = name;
         this.synonym = synonym;
+        this.site = site;
+        this.geneLocus = geneLocus;
+        this.geneticAnomaly = geneticAnomaly;
         this.inheritance = inheritance;
         this.retardation = retardation;
         this.retardationNotes = retardationNotes;
         this.evolution = evolution;
         this.clinicalExams = clinicalExams;
+        this.omimLink = omimLink;
         this.bibliography = bibliography;
         this.features = features;
     }
@@ -47,11 +56,15 @@ public class Syndrome implements Parcelable {
         this.id = in.readInt();
         this.name = in.readString();
         this.synonym = in.readString();
+        this.site = in.readString();
+        this.geneLocus = in.readString();
+        this.geneticAnomaly = in.readString();
         this.inheritance = in.readString();
         this.retardation = in.readString();
         this.retardationNotes = in.readString();
         this.evolution = in.readString();
         this.clinicalExams = in.readString();
+        this.omimLink = in.readString();
         List<String> bib = new ArrayList<>();
         in.readStringList(bib);
         bibliography = bib.toArray(new String[]{});
@@ -138,6 +151,38 @@ public class Syndrome implements Parcelable {
         this.features = features;
     }
 
+    public String getSite() {
+        return site;
+    }
+
+    public void setSite(String site) {
+        this.site = site;
+    }
+
+    public String getGeneLocus() {
+        return geneLocus;
+    }
+
+    public void setGeneLocus(String geneLocus) {
+        this.geneLocus = geneLocus;
+    }
+
+    public String getGeneticAnomaly() {
+        return geneticAnomaly;
+    }
+
+    public void setGeneticAnomaly(String geneticAnomaly) {
+        this.geneticAnomaly = geneticAnomaly;
+    }
+
+    public String getOmimLink() {
+        return omimLink;
+    }
+
+    public void setOmimLink(String omimLink) {
+        this.omimLink = omimLink;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -148,11 +193,15 @@ public class Syndrome implements Parcelable {
         dest.writeInt(id);
         dest.writeString(name);
         dest.writeString(synonym);
+        dest.writeString(site);
+        dest.writeString(geneLocus);
+        dest.writeString(geneticAnomaly);
         dest.writeString(inheritance);
         dest.writeString(retardation);
         dest.writeString(retardationNotes);
         dest.writeString(evolution);
         dest.writeString(clinicalExams);
+        dest.writeString(omimLink);
         dest.writeStringList(Arrays.asList(bibliography));
         dest.writeTypedArray(features.toArray(new Feature[features.size()]),0);
     }

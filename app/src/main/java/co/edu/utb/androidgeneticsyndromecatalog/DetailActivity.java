@@ -48,6 +48,18 @@ public class DetailActivity extends AppCompatActivity {
         TextView clinicalExams = (TextView)findViewById(R.id.examsTextView);
         clinicalExams.setText(s.getClinicalExams());
 
+        TextView omim = (TextView)findViewById(R.id.omimTextView);
+        omim.setText(s.getOmimLink());
+
+        TextView site = (TextView)findViewById(R.id.siteTextView);
+        site.setText(s.getSite());
+
+        TextView geneticAnomaly = (TextView)findViewById(R.id.geneticAnomalyTextView);
+        geneticAnomaly.setText(s.getGeneticAnomaly());
+
+        TextView geneLocus = (TextView)findViewById(R.id.geneLocusTextView);
+        geneLocus.setText(s.getGeneLocus());
+
         LinearLayout bib = (LinearLayout) findViewById(R.id.bibliography);
         for(String b : s.getBibliography()) {
             TextView entry = new TextView(this);
